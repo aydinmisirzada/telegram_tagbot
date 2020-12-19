@@ -12,7 +12,7 @@ import random
 import db
 
 
-API_TOKEN = os.environ['TELEGRAM_TOKEN']
+API_TOKEN = os.environ['1418721253:AAHvUvD3jDbsuGAKdNk89x9i72YtUg_SmLU']
 
 updater = Updater(API_TOKEN,use_context=True)
 
