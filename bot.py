@@ -32,21 +32,6 @@ def tag(update: Update, context: CallbackContext):
         parse_mode="Markdown",
     )
 
-
-def kick(update: Update, context: CallbackContext):
-
-    if update.effective_user['username'] == "INV1SBLE":
-        context.bot.leave_chat(
-            chat_id=update.effective_chat.id)
-    else:
-        context.bot.send_message(
-            chat_id=update.effective_chat.id,
-            text=
-            "You are not allowed to kick me!",
-            reply_to_message_id=update.effective_message.message_id,
-            parse_mode=ParseMode.HTML,
-        )
-
 def add(update: Update, context: CallbackContext):
     users = []
     user = update.effective_user
@@ -82,7 +67,6 @@ def add(update: Update, context: CallbackContext):
 
 dispatcher.add_handler(CommandHandler("tag", tag))
 dispatcher.add_handler(CommandHandler("add", add))
-dispatcher.add_handler(CommandHandler("kick", kick))
 
 updater.start_polling()
 # updater.idle()
